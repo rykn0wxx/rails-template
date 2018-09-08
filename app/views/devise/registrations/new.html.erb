@@ -1,0 +1,38 @@
+<% title "Registration", false, false %>
+
+<div class="auth-box">
+	<div class="auth-card">
+		<div class="auth-logo">
+			<span>
+				<b>admin</b>istrate
+			</span>
+		</div>
+		<p class="auth-msg">
+			Register a new user account.
+		</p>
+		<div class="row">
+			<%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => "form-material col s12", :novalidate => true}  do |f| %>
+				<div class="row">
+					<%= f.input :email, :required => true, :autofocus => false, :autocomplete => "off", :icon => "contact_mail", :hint => false %>
+				</div>
+				<div class="row">
+					<%= f.input :username, :required => true, :autofocus => false, :autocomplete => "off", :icon => "perm_identity", :hint => false %>
+				</div>
+				<div class="row">
+					<%= f.input :password, :required => true, :autocomplete => "off", :icon => "lock", :hint => false  %>
+				</div>
+				<div class="row">
+					<%= f.input :password_confirmation, :required => true, :autocomplete => "off", :icon => "lock", :hint => false  %>
+				</div>
+				<div class="form-actions">
+					<%= f.button :button, :class => "md-button" do %>
+					  Submit
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+		<div class="row external-actions">
+			<%= render "devise/shared/links" %>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,58 @@
+.md-fab-button, .md-fab-button.button {
+	display: inline-block;
+	cursor: pointer;
+	min-height: 36px;
+	align-items: center;
+	text-align: center;
+	box-sizing: border-box;
+	white-space: nowrap;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 14px;
+	font-style: inherit;
+	font-variant: inherit;
+	font-family: inherit;
+	text-decoration: none;
+	letter-spacing: 0.01em;
+	user-select: none;
+	outline: none;
+	border: 0;
+	padding: 0 6px;
+	margin: 6px 8px;
+	background: transparent;
+
+	z-index: 20;
+	line-height: 56px;
+	min-width: 0;
+	width: 56px;
+	height: 56px;
+	vertical-align: middle;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	border-radius: 50%;
+	background-clip: padding-box;
+	overflow: hidden;
+	transition: all .3s cubic-bezier(.55,0,.55,.2) !important;
+	transition-property: background-color,box-shadow,transform !important;
+
+	position: fixed;
+	top: 20px;
+	right: auto;
+	bottom: auto;
+	left: 52px;
+
+	background-color: $primary-color-dark;
+	color: $white;
+	> i {
+		margin: auto;
+		background-repeat: no-repeat;
+		display: block;
+		height: 24px;
+		width: 24px;
+		min-width: 24px;
+		min-height: 24px;
+		line-height: 56px;
+	}
+	&:hover {
+		background-color: mix($black, $primary-color-dark, 30%);
+	}
+}

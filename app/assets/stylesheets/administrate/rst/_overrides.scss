@@ -1,0 +1,77 @@
+* {
+	&, &:hover, &:focus, &:active {
+		outline: none;
+	}
+}
+a {
+  text-decoration: none;
+  transition: border-bottom 0.35s;
+	outline: none;
+	&:hover, &:focus, &:active {
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+.navigation__link {
+	text-decoration: none;
+	&:hover, &:focus, &:active {
+		text-decoration: none;
+	}
+	&.navigation__link--active {
+		background-color: rgba($secondary-color, 0.5);
+    border-radius: $base-border-radius;
+    color: $base-font-color;
+		box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+	}
+}
+
+.main-content__header, tr {
+	border-bottom: 1px solid rgba($grey-0, 0.2);
+}
+
+.button {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	min-height: 36px;
+	min-width: 88px;
+	line-height: 36px;
+	vertical-align: middle;
+	align-items: center;
+	text-align: center;
+	border-radius: 2px;
+	box-sizing: border-box;
+	user-select: none;
+	outline: none;
+	border: 0;
+	padding: 0 6px;
+	margin: 6px 8px;
+	background: transparent;
+	color: currentColor;
+	white-space: nowrap;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 14px;
+	font-style: inherit;
+	font-variant: inherit;
+	font-family: inherit;
+	text-decoration: none;
+	overflow: hidden;
+	transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	background-color: $secondary-color;
+	color: rgba(255,255,255,0.87);
+	&:hover {
+		background-color: mix($black, $secondary-color, 40%);
+		color: rgba(255,255,255,0.9);
+	}
+	&:active {
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,.4);
+		outline: none;
+	}
+}
+
+.navigation {
+	padding-top: 80px;
+}

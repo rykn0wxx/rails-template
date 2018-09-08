@@ -1,0 +1,114 @@
+.material-table {
+	padding: 0;
+
+	.table-header {
+		height: 64px;
+	  padding-left: 24px;
+	  padding-right: 14px;
+	  align-items: center;
+	  display: flex;
+	  border-bottom: solid 1px #DDDDDD;
+	}
+	.table-footer {
+	  height: 56px;
+	  padding-left: 24px;
+	  padding-right: 14px;
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: flex-end;
+	  align-items: center;
+	  font-size: 12px !important;
+	  color: rgba(0, 0, 0, 0.54);
+		.material-pagination {
+		  display: flex;
+		  margin: 0;
+			li {
+				&:first-child {
+				  margin-right: 24px;
+				}
+				a {
+					color: rgba(0, 0, 0, 0.54);
+				}
+			}
+		}
+	}
+
+	table {
+		table-layout: fixed;
+		tr {
+			font-size: 12px;
+			td {
+				a {
+					color: inherit;
+					i {
+						font-size: 18px;
+						color: rgba(0, 0, 0, 0.54);
+					}
+				}
+			}
+		}
+		th {
+			font-size: 12px;
+		  font-weight: 500;
+		  color: #757575;
+		  cursor: pointer;
+		  white-space: nowrap;
+		  padding: 0;
+		  height: 56px;
+		  padding-left: 56px;
+		  vertical-align: middle;
+		  outline: none !important;
+		}
+		tbody {
+			tr {
+				&:hover {
+					background-color: rgba(#eeeeee, 0.5);
+				}
+			}
+		}
+		th, td {
+			&:first-child {
+				padding: 0 0 0 24px;
+			}
+			&:last-child {
+				padding: 0 14px 0 0;
+			}
+		}
+	}
+
+}
+
+
+.material-table {
+	table.md-api-table {
+	  margin-bottom: 16px;
+	  max-width: 100%;
+	  width: 100%;
+	  border-spacing: 0;
+	  border-radius: 2px;
+	  overflow: hidden;
+		td, th {
+			border-radius: 0;
+			padding: 12px 8px;
+		  text-align: left;
+			vertical-align: middle;
+		}
+		td {
+			vertical-align: top;
+		}
+		tr {
+			font-size: 1.4rem;
+			&:nth-child(odd) td {
+				background-color: rgba($secondary-color, 0.2); //#E3ECF5;
+			}
+			&:nth-child(even) td {
+				background-color: rgba($secondary-color, 0.4); //#D1DEEC;
+			}
+		}
+		th {
+			font-size: 1.4rem;
+			background-color: $secondary-color;
+			color: color-yiq($secondary-color);
+		}
+	}
+}

@@ -1,0 +1,32 @@
+<% title "Login", false, false %>
+
+<div class="auth-box">
+	<div class="auth-card">
+		<div class="auth-logo">
+			<span>
+				<b>admin</b>istrate
+			</span>
+		</div>
+		<p class="auth-msg">
+			Sign in to start your session
+		</p>
+		<div class="row">
+			<%= simple_form_for resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "form-material col s12", :novalidate => true}  do |f| %>
+				<div class="row">
+					<%= f.input :login, :required => true, :autofocus => false, :autocomplete => "off", :icon => "person_outline", :hint => false %>
+				</div>
+				<div class="row">
+					<%= f.input :password, :required => true, :autocomplete => "off", :icon => "lock", :hint => false  %>
+				</div>
+				<div class="form-actions">
+					<%= f.button :button, :class => "md-button" do %>
+					  Submit
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+		<div class="row external-actions">
+			<%= render "devise/shared/links" %>
+		</div>
+	</div>
+</div>

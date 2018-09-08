@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" class="rykn0wxx no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="author" content="rykn0wxx" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+		<title>
+			<%= content_for?(:title) ? yield(:title) + " | rykn0wxx" : "rykn0wxx" %>
+		</title>
+
+		<link rel="icon" type="image/png" sizes="16x16" href="<%= image_path('favicon-16x16.png') %>" />
+		<link rel="icon" type="image/png" sizes="32x32" href="<%= image_path('favicon-32x32.png') %>" />
+		<link rel="icon" type="image/png" sizes="96x96" href="<%= image_path('favicon-96x96.png') %>" />
+
+		<script type="text/javascript">
+			document.documentElement.className = "rykn0wxx js";
+		</script>
+
+		<%= tag :meta, name: 'turbolinks-root', content: '/' %>
+		<%= tag :meta, name: 'turbolinks-cache-control', content: 'no-preview' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+		<%= render("shared/styles_css", :css_name => "admin-style") %>
+
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body class="admin-theme">
+
+		<header role="header" class="main-header navbar-fixed">
+	    <nav>
+	      <div class="nav-wrapper">
+	        <a href="#!" class="brand-logo hide-on-med-and-down">Logo</a>
+					<div class="col s12 right">
+						<a href="#!" class="breadcrumb">First</a>
+						<a href="#!" class="breadcrumb">Second</a>
+					</div>
+	      </div>
+	    </nav>
+	  </header>
+
+		<section class="layout-row layout-align-start-stretch">
+
+			<aside class="main-sidebar">
+				<ul id="admin-sidenav" class="sidenav sidenav-fixed">
+					<% Administrate::Namespace.new("admin").resources.each do |resource| %>
+						<li>
+							<%= link_to resource.to_s.humanize, "/admin/#{resource}", :class => "adm-nav-link" %>
+						</li>
+					<% end %>
+				</ul>
+			</aside>
+
+			<main role="main" class="main-content flex">
+				<%= yield %>
+			</main>
+
+		</section>
+
+		<%= render "shared/scripts_js" %>
+  </body>
+</html>

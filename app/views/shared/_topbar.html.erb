@@ -1,0 +1,36 @@
+<header class="main-header">
+	<div class="navbar-fixed">
+		<ul id="user-options" class="dropdown-content">
+			<% if user_signed_in? %>
+			  <li>
+			  	<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+			  </li>
+				<% if current_user.admin? %>
+				<li>
+			  	<%= link_to('Admin', admin_root_path) %>
+			  </li>
+				<% end %>
+			<% else %>
+			  <li>
+			  	<%= link_to('Login', new_user_session_path)  %>
+			  </li>
+			<% end %>
+		</ul>
+		<nav>
+	    <div class="nav-wrapper">
+				<%= link_to "#", :class => "sidenav-trigger show-on-large", :data => { :target => "main-sidebar", :turbolinks => false } do %>
+				  <%= mi.menu %>
+				<% end  %>
+				<%= link_to root_path, :class => "brand-logo" do %>
+				  <span class="show-on-small hide-on-med-and-up"><b>a</b>dm</span>
+					<span class="hide-on-small-only">
+						<b>admin</b>istrate
+					</span>
+				<% end %>
+	      <ul class="right hide-on-med-and-down" style="margin-right: 18px;">
+	        <li><a href="#!" class="dropdown-trigger" data-target="user-options"><%= mi.settings %></a></li>
+	      </ul>
+	    </div>
+	  </nav>
+	</div>
+</header>

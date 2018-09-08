@@ -1,0 +1,33 @@
+source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby "<%= RUBY_VERSION %>"
+
+gem "rails", "~> <%= Rails.version %>"
+gem "puma"<%= gemfile_requirement("puma") %>
+gem "sass-rails"<%= gemfile_requirement("sass-rails") %>
+gem "uglifier"<%= gemfile_requirement("uglifier") %>
+gem "turbolinks"<%= gemfile_requirement("turbolinks") %>
+gem "bcrypt"<%= gemfile_requirement("bcrypt") %>
+gem "rack-cors"
+gem "bootsnap", ">= 1.2.0", require: false
+
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby, :ruby]
+gem "jquery-rails", "~> 4.3", ">= 4.3.3"
+gem "material_icons", "~> 2.2", ">= 2.2.1"
+gem "materialize-sass", "~> 1.0.0.rc2"
+gem "smarter_csv"
+gem "parallel"
+gem "simple_form", "~> 4.0", ">= 4.0.1"
+gem "devise"
+gem "administrate"
+
+group :development, :test do
+  gem "byebug", platforms: [:mri, :mingw, :x64_mingw, :ruby]
+end
+
+group :development do
+	gem "sqlite3"
+	gem "annotate"
+  gem "web-console", ">= 3.3.0"
+end

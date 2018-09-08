@@ -1,0 +1,70 @@
+// Typography
+$base-font-family: Ubuntu, Roboto, 'Helvetica Neue', sans-serif;
+$heading-font-family: $base-font-family;
+
+$base-font-size: 1em;
+
+$bold-font-weight: 700;
+
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 4px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+
+// Colors
+$primary-color: #35559f;
+$primary-color-light: #9ba9ce;
+$primary-color-dark: #25438a;
+
+$secondary-color: #4D5354;// #2A3132;
+$success-color: #6AB187;
+$error-color: #f48468;
+$link-color: #004890;
+
+$white: #fff;
+$black: #000;
+
+$blue: #4b7bec;
+$red: #fc5c65;
+$light-yellow: #ffdd73;
+$light-green: #78dbcf;
+
+$grey-0: #536781;
+$grey-1: #465970;
+$grey-2: #37475b;
+$grey-5: #283545;
+$grey-7: #17212f;
+
+$hint-grey: #778ca3;
+
+// Font Colors
+$base-font-color: rgba(0,0,0,0.87);
+$action-color: #2980b9;
+
+// Background Colors
+$base-background-color: #eaeaea;
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 1px;
+
+// Flash Colors
+$flash-colors: (
+  alert: $light-yellow,
+  error: $red,
+  notice: mix($white, $blue, 50%),
+  success: $light-green
+);
+
+// Border
+$base-border-color: $grey-1;
+$base-border: 1px solid $base-border-color;
+
+// Transitions
+$base-duration: 250ms;
+$base-timing: ease-in-out;

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="rykn0wxx no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="author" content="rykn0wxx" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+		<title>
+			<%= content_for?(:title) ? yield(:title) + " | rykn0wxx" : "rykn0wxx" %>
+		</title>
+
+		<link rel="icon" type="image/png" sizes="16x16" href="<%= image_path('favicon-16x16.png') %>" />
+		<link rel="icon" type="image/png" sizes="32x32" href="<%= image_path('favicon-32x32.png') %>" />
+		<link rel="icon" type="image/png" sizes="96x96" href="<%= image_path('favicon-96x96.png') %>" />
+
+		<script type="text/javascript">
+			document.documentElement.className = "rykn0wxx js";
+		</script>
+
+		<%= tag :meta, name: 'turbolinks-root', content: '/' %>
+		<%= tag :meta, name: 'turbolinks-cache-control', content: 'no-preview' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+		<%= render "shared/styles_css" %>
+
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body class="">
+		<%= render "shared/flash" %>
+		<div class="md-content wrapper">
+
+			<div class="layout-row">
+				<%= render "shared/sidebar" %>
+				<div class="layout-column flex" tabindex="-1" role="main">
+					<%= render "shared/topbar" %>
+					<main class="layout-column flex md-content md-scroll-y">
+						<div class="flex-noshrink">
+							<div class="content">
+								<%= yield %>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+
+		</div>
+
+		<%= render "shared/scripts_js" %>
+  </body>
+</html>

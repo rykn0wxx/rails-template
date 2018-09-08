@@ -1,0 +1,114 @@
+html, body {
+	min-height: 100%;
+	position: relative;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+body {
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+	font-weight: 400;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin: 0;
+	padding: 0;
+	background-color: #eaeaea;
+	color: rgba(0,0,0,0.87);
+}
+
+[tabindex='-1']:focus {
+  outline: none;
+}
+.inset {
+  padding: 10px;
+}
+
+select, button, textarea, input {
+  vertical-align: baseline;
+}
+
+input[type="reset"], input[type="submit"], html input[type="button"], button {
+  cursor: pointer;
+  -webkit-appearance: button;
+
+  &[disabled] {
+    cursor: default;
+  }
+}
+
+textarea {
+  vertical-align: top;
+  overflow: auto;
+}
+
+input {
+  &[type="search"] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+  }
+  &:-webkit-autofill {
+    text-shadow: none;
+  }
+}
+
+.md-shadow-bottom-z-1 {
+  @include md-shadow-bottom-z-1();
+}
+.md-shadow-bottom-z-2 {
+  @include md-shadow-bottom-z-2();
+}
+
+.md-padding {
+  padding: 8px;
+}
+
+.md-margin {
+  margin: 8px;
+}
+
+.wrapper {
+	@include clrfx;
+	min-height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.main-header {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 3;
+	transition-property: background-color,fill,color;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(.35,0,.25,1);
+	min-height: 64px;
+	width: 100%;
+}
+
+main {
+	flex: 1 0 auto;
+}
+.content {
+	display: block;
+	padding: 8px;
+	min-height: 250px;
+}
+
+nav {
+	.brand-logo {
+		@media #{$medium-and-down} {
+			left: auto;
+			transform: none;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+<aside class="main-sidebar" id="main-sidebar">
+	<ul class="sidebar-menu sidenav" id="slide-out">
+		<li>
+			<a href="#">
+				<span class="item-icon">
+					<%= mi.dashboard %>
+				</span>
+				<span class="item-text">Item</span>
+			</a>
+		</li>
+<% Mudhead::Namespace.new('main').routes_v2.each do |r| %>
+		<li>
+			<%= link_to url_for(controller: r.at(0), action: r.at(1)) do %>
+			<span class="item-icon"><%= mi.donut_large %>	</span>
+			<span class="item-text"><%= r.at(1) %></span>
+			<% end %>
+		</li>
+<% end %>
+	</ul>
+</aside>

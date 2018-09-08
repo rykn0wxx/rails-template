@@ -1,0 +1,101 @@
+.authentication {
+	.form-material {
+		position: relative;
+	}
+	.box-wrapper {
+		width: 100vw;
+		height: 100vh;
+		position: relative;
+		overflow: hidden;
+	}
+	.auth-wrapper {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		padding: 0;
+		margin: 0;
+		top: 0;
+		left: 0;
+	}
+	.auth-logo {
+		font-size: 3.5rem;
+		text-align: center;
+		margin-bottom: 25px;
+		font-weight: 400;
+		color: #444444;
+		b {
+			color: #232323;
+		}
+
+	}
+	.auth-msg {
+		margin: 0;
+		text-align: center;
+		padding: 0 20px 20px 20px;
+		color: #666666;
+	}
+	.auth-box {
+		width: 400px;
+		position: absolute;
+		right: 0px;
+		margin: 0 auto;
+		height: 100%;
+		box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+		border-radius: 2px;
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		background-color: #313944;
+		color: #DADFE1;
+	}
+	.auth-card {
+		flex: 1 1 auto;
+		padding: 2.0rem;
+	}
+	.form-material {
+		.input-field {
+			.prefix {
+				color: #F0793F;
+				line-height: 2rem;
+				height: 2rem;
+				top: 1rem;
+				&.active {
+					color: #EA5912;
+				}
+			}
+			.md-input, .md-input-label {
+				font-size: 1.6rem;
+			}
+			.md-input {
+				color: rgba(255,255,255,0.87);
+			}
+			.md-input-label {
+				top: -3px;
+			}
+		}
+	}
+	.external-actions {
+		a {
+			color: #FFAE87;
+			&:hover, &:focus, &:active {
+				color: #DB4700;
+			}
+		}
+	}
+	@media #{$medium-and-down} {
+		.auth-wrapper {
+			padding: 10% 0;
+			position: relative;
+			overflow: hidden;
+		}
+		.auth-box {
+			position: relative;
+			width: 90%;
+			box-shadow: 0px 10px 20px -8px rgba(0,0,0,0.6);
+		}
+	}
+
+}

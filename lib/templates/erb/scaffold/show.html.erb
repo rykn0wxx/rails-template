@@ -1,0 +1,19 @@
+<%% title "Show", true, true  %>
+
+<div class="row">
+	<div class="col s12">
+		<div class="card-panel">
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+			<p>
+			  <strong><%= attribute.human_name %>:</strong>
+			  <%%= @<%= singular_table_name %>.<%= attribute.name %> %>
+			</p>
+<% end -%>
+			<div>
+				<%%= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>) %>
+				<br>
+				<%%= link_to 'Back', <%= index_helper %>_path %>
+			</div>
+		</div>
+	</div>
+</div>

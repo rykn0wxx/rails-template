@@ -1,0 +1,35 @@
+@font-face {
+	font-display: fallback;
+}
+@import "config/fonts";
+
+@import "config/variables";
+@import "utility/mixin-base";
+@import "utility/mixin-layout";
+@import "utility/functions";
+
+$primary-color: #35559f;
+$primary-color-light: #9ba9ce;
+$primary-color-dark: #25438a;
+
+$secondary-color: #4D5354;// #2A3132;
+$success-color: #6AB187;
+$error-color: #f48468;
+$link-color: #004890;
+
+@import "material_icons";
+@import "materialize";
+
+
+/*!
+ * Custom
+ */
+
+@import "app/core";
+@import "app/typography";
+@import "config/layout";
+@import "components/buttons";
+@import "components/icon";
+@import "components/bmd-card";
+@import "components/bmd-input";
+@import "components/tables";

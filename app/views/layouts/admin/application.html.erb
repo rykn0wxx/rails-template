@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" class="rykn0wxx no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="author" content="rykn0wxx" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+		<title>
+			<%= content_for?(:title) ? yield(:title) + " | rykn0wxx" : "rykn0wxx" %>
+		</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<script type="text/javascript">
+			document.documentElement.className = "rykn0wxx js";
+		</script>
+
+		<%= tag :meta, name: 'turbolinks-root', content: '/' %>
+		<%= tag :meta, name: 'turbolinks-cache-control', content: 'no-preview' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+		<%= render "stylesheet" %>
+  </head>
+
+  <body class="">
+
+		<%= render "icons" %>
+
+		<div class="app-container">
+
+			<%= link_to root_path, :class => "button md-fab-button" do %>
+			  <i class="material-icons">dashboard</i>
+			<% end %>
+
+			<%= render "navigation" -%>
+
+			<main class="main-content" role="main">
+
+				<%= render "flashes" -%>
+
+				<%= yield %>
+
+			</main>
+
+		</div>
+
+  </body>
+</html>
